@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/fragment_movie_poster"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:contentDescription="@string/movie_image"
+        fresco:placeholderImageScaleType="fitCenter"/>
+
+    <TextView
+        android:id="@+id/fragment_movie_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:paddingTop="10dp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:text="Movie" />
+
+
+    <TextView
+        android:id="@+id/fragment_movie_release_date"
+        android:layout_gravity="end"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="10dp"
+        tools:text="2018-01-03"/>
+
+    <TextView
+        android:id="@+id/fragment_movie_overview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="10dp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        tools:text="I am the zanga"/>
+
+</LinearLayout>

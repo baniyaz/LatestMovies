@@ -1,0 +1,78 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+
+def properties = new Properties()
+properties.load new FileInputStream(rootProject.file('local.properties'))
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.zainab.evaluation"
+        minSdkVersion 24
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        buildConfigField 'String', 'TMDB_API_KEY', "\"${properties['tmdbApiKey']}\""
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+androidExtensions {
+    experimental = true
+}
+
+dependencies {
+    def appDependencies = rootProject.ext.appDependencies
+    def testDependencies = rootProject.ext.testDependencies
+
+    //Kotlin
+    implementation appDependencies.kotlin
+
+    //Glide
+    implementation appDependencies.fresco
+
+    //Dagger
+    implementation appDependencies.dagger
+    kapt appDependencies.daggerCompiler
+
+    //Annotation Processing
+    implementation appDependencies.javaxAnnotation
+    implementation appDependencies.javaxInject
+    compileOnly appDependencies.androidAnnotations
+
+    //OkHttp
+    implementation appDependencies.okHttp
+    implementation appDependencies.okHttpLogger
+    implementation appDependencies.gson
+
+    //Retrofit
+    implementation appDependencies.retrofit
+    implementation appDependencies.retrofitConverter
+    implementation appDependencies.retrofitAdapter
+
+    //Android Support
+    implementation appDependencies.appCompat
+    implementation appDependencies.supportDesign
+    implementation appDependencies.constraintLayout
+
+    //RXJava
+    implementation appDependencies.rxJava
+    implementation appDependencies.rxAndroid
+
+    //Test
+    testImplementation testDependencies.junit
+    testImplementation testDependencies.assertj
+    testImplementation testDependencies.mockito
+    testImplementation testDependencies.mockitoKotlin
+}

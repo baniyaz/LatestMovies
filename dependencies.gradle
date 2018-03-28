@@ -1,0 +1,49 @@
+ext {
+    //Libraries
+    rxJavaVersion = '2.0.2'
+    rxAndroidVersion = '2.0.1'
+    javaxAnnotationVersion = '1.0'
+    javaxInjectVersion = '1'
+    androidAnnotationsVersion = '21.0.3'
+    okHttpVersion ='3.9.1'
+    appCompatVersion = '26.1.0'
+    constraintLayoutVersion = '1.0.2'
+    retrofitVersion = '2.3.0'
+    gsonVersion = '2.8.1'
+    daggerVersion = '2.8'
+    frescoVersion = '1.8.1'
+
+    //Testing
+    jUnitVersion = '4.12'
+    assertJVersion = '1.7.1'
+    mockitoKotlinVersion = '1.5.0'
+    mockitoVersion = '2.8.9'
+
+    appDependencies = [
+            rxJava:             "io.reactivex.rxjava2:rxjava:${rxJavaVersion}",
+            rxAndroid:          "io.reactivex.rxjava2:rxandroid:${rxAndroidVersion}",
+            javaxAnnotation:    "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
+            javaxInject:        "javax.inject:javax.inject:${javaxInjectVersion}",
+            androidAnnotations: "com.android.support:support-annotations:${androidAnnotationsVersion}",
+            okHttp:             "com.squareup.okhttp3:okhttp:${okHttpVersion}",
+            okHttpLogger:       "com.squareup.okhttp3:logging-interceptor:${okHttpVersion}",
+            appCompat:          "com.android.support:appcompat-v7:${appCompatVersion}",
+            supportDesign:      "com.android.support:design:${appCompatVersion}",
+            constraintLayout:   "com.android.support.constraint:constraint-layout:${constraintLayoutVersion}",
+            retrofit:           "com.squareup.retrofit2:retrofit:${retrofitVersion}",
+            retrofitConverter:  "com.squareup.retrofit2:converter-gson:${retrofitVersion}",
+            retrofitAdapter:    "com.squareup.retrofit2:adapter-rxjava2:${retrofitVersion}",
+            gson:               "com.google.code.gson:gson:${gsonVersion}",
+            kotlin:             "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version",
+            daggerCompiler:     "com.google.dagger:dagger-compiler:${daggerVersion}",
+            dagger:             "com.google.dagger:dagger:${daggerVersion}",
+            fresco:             "com.facebook.fresco:fresco:${frescoVersion}",
+    ]
+
+    testDependencies = [
+            junit:              "junit:junit:${jUnitVersion}",
+            mockitoKotlin:      "com.nhaarman:mockito-kotlin:${mockitoKotlinVersion}",
+            assertj:            "org.assertj:assertj-core:${assertJVersion}",
+            mockito:            "org.mockito:mockito-inline:${mockitoVersion}"
+    ]
+}

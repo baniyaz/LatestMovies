@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Zish</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="movie_image">Movie Image</string>
+</resources>

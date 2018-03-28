@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginTop="16dp"
+    android:layout_height="wrap_content">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/movie_item_imageView"
+        android:layout_width="92dp"
+        android:layout_height="133dp"
+        android:layout_marginStart="16dp"
+        android:contentDescription="@string/movie_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        fresco:placeholderImageScaleType="fitCenter"
+        tools:layout_height="133dp"
+        tools:layout_width="92dp"
+        tools:src="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:id="@+id/movie_item_release_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+        android:paddingBottom="10dp"
+        tools:text="2017/10/11"/>
+
+</android.support.constraint.ConstraintLayout>
